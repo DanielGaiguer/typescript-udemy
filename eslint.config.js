@@ -43,5 +43,12 @@ module.exports = defineConfig([{
         "@typescript-eslint": typescriptEslint,
     },
 
-    rules: {},
+    rules: {
+        'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+        ],
+    },
 }]);
