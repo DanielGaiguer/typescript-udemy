@@ -1,1 +1,1 @@
-console.log(`Ola`)
+const nome = 'luiz';
