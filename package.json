@@ -16,5 +16,8 @@
     "url": "https://github.com/DanielGaiguer/typescript-udemy/issues"
   },
   "homepage": "https://github.com/DanielGaiguer/typescript-udemy#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
 }
