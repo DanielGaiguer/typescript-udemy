@@ -19,3 +19,11 @@ const upper = toUpperCase('a', 'b', 'c');
 console.log(result);
 console.log(concatenacao);
 console.log(upper);
+
+//readonly
+
+const array1: readonly string[] = ['Daniel', 'Gaiguer'];
+const array2: ReadonlyArray<string> = ['Daniel', 'Gaiguer'];
+
+console.log(array1);
+console.log(array2);
