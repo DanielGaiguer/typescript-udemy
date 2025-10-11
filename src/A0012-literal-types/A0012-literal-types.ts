@@ -17,7 +17,7 @@ const person = {
     sobrenome: 'Gaiguer',
 };
 
-//person.nome = 'Daniel1'; // Ira reclamar, dizdendo que o tipo Daniel1, nao pode ser atribuido ao tipo Daniel
+person.nome = 'Daniel1'; // Ira reclamar, dizdendo que o tipo Daniel1, nao pode ser atribuido ao tipo Daniel
 
 // Outra coisa que podemos fazer, e que juntamento literal types, com union types, podemos ter um enum, mas com a tipagem segura
 
