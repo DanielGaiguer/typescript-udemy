@@ -17,8 +17,8 @@ const person = {
     sobrenome: 'Gaiguer',
 };
 
-//person.nome = 'Daniel1'; // Ira reclamar, dizdendo que o tipo Daniel1, nao pode ser atribuido ao tipo Daniel
-console.log(person);
+person.nome = 'Daniel1'; // Ira reclamar, dizdendo que o tipo Daniel1, nao pode ser atribuido ao tipo Daniel
+
 // Outra coisa que podemos fazer, e que juntamento literal types, com union types, podemos ter um enum, mas com a tipagem segura
 
 // Desta forma, ao inves de falar que cor seja uma String, estou sendo bem mais especifico, falando que a quer que a funcao receba uma string, so que nesta string so podem conter os tipos, ou vermelho, ou amarelo ou azul, e esses tipos sao tipos literais
