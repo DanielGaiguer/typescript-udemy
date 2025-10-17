@@ -13,7 +13,6 @@ type Intersecao = AB & AC & AD;
 //let y: Intersecao = 'C'; // ❌ Erro
 //let z: Intersecao = 'A'; // ✅ Ok
 
-
 const pessoa: Pessoa = {
     nome: 'Daniel',
     sobrenome: 'Gaiguer',
