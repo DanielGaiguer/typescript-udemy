@@ -12,13 +12,13 @@ let arrayDeNumeros2: number[] = [1,2,3];
 let arrayDeString: Array<string> = ['a', 'b'];
 let arrayDeString2: string[] = ['a', 'b'];
 
-
+/*
 //Objetos                                       ? - Quer dizer opcional
 let pessoa: {nome: string, idade: number, adulto?: boolean} = {
     idade: 30,
     nome: 'Daniel'
 }
-
+*/
 //Funcoes tipagem- param     param   return
 function soma(x: number, y: number):number {
     return x+y;

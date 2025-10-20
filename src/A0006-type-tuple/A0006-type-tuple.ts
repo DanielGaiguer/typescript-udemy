@@ -5,11 +5,11 @@ const dadosCliente2: [number, string, string] = [1, 'Daniel', 'Gaiguer'];
 const dadosCliente3: [number, string, string?] = [1, 'Daniel']; //Opcional
 const dadosCliente4: [number, string, ...string[]] = [1, 'Daniel', 'Gaiguer']; //usando Rest operator
 
-dadosCliente1[0] = 100; //Pode ser alterado, desde de que seja do mesmo tipo
+//dadosCliente1[0] = 100; //Pode ser alterado, desde de que seja do mesmo tipo
 
 //dadosCliente1[1] = 100; Da erro neste caso
 
-dadosCliente1[1] = 'Menezes';
+//dadosCliente1[1] = 'Menezes';
 
 //dadosCliente1[2] = 'Gaiguer'; //Da erro, ja que ele esta contando que tem uma tupla definindo o tipo do indice2
 
