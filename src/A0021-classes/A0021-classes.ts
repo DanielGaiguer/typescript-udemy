@@ -1,20 +1,48 @@
-export class Empresa {
-    //Public - Pode ser acessado e alterado fora da classe
-    // readonly - Nao pode ser alterado, mas pode ser lido
-    // Ou seja, este no´me nunca mais vai poder ser alterado
-    // Inferir o tipo neste caso e redundante, mas nao tem problema ser atribuido
-    public readonly nome: string;
-    // Ele vai aceitar, somente objetos criados pela classe colaborador
-    private readonly colaboradores: Colaborador[] = [];
+//Public - Pode ser acessado e alterado fora da classe
+// readonly - Nao pode ser alterado, mas pode ser lido
+// private - Nao pode ser alterado fora da classe
+// Ou seja, este nome nunca mais vai poder ser alterado
+// Inferir o tipo neste caso e redundante, mas nao tem problema ser atribuido
 
-    constructor(nome: string) {
+export class Empresa {
+    public readonly nome: string; // Ele vai aceitar, somente objetos criados pela classe colaborador
+    private readonly colaboradores: Colaborador[] = [];
+    protected readonly cnpj: string;
+
+    constructor(nome: string, cnpj: string) {
         this.nome = nome;
+        this.cnpj = cnpj;
+    }
+
+    // O objetivo deste metodo é alterar o valor privado de colaboradores
+    addColaborador(colaborador: Colaborador): void {
+        this.colaboradores.push(colaborador);
+    }
+
+    showColaboradores(): void {
+        for (const colaborador of this.colaboradores) {
+            console.log(colaborador);
+        }
     }
 }
 
-export class Colaborador {}
+// Atalho, forma curta:
+export class Colaborador {
+    constructor(
+        public readonly nome: string,
+        public readonly sobrenome: string,
+    ) {}
+}
 
-const empresa1 = new Empresa('Facebook');
+const empresa1 = new Empresa('Facebook', '11.111.111/0001-11');
+const colaborador1 = new Colaborador('Daniel', 'Gaiguer');
+const colaborador2 = new Colaborador('Tailene', 'Marcela');
+const colaborador3 = new Colaborador('Eliane', 'Menezes');
+
+empresa1.addColaborador(colaborador1);
+empresa1.addColaborador(colaborador2);
+empresa1.addColaborador(colaborador3);
+
 console.log(empresa1);
-//empresa1.nome = 'Youtube'; //Vai reclamar, ja que é readonly
-console.log(empresa1.nome);
+
+empresa1.showColaboradores();
