@@ -5,8 +5,8 @@
 // Inferir o tipo neste caso e redundante, mas nao tem problema ser atribuido
 
 export class Empresa {
-    public readonly nome: string; // Ele vai aceitar, somente objetos criados pela classe colaborador
-    private readonly colaboradores: Colaborador[] = [];
+    public readonly nome: string;
+    private readonly colaboradores: Colaborador[] = []; // Ele vai aceitar, somente objetos criados pela classe colaborador
     protected readonly cnpj: string;
 
     constructor(nome: string, cnpj: string) {
