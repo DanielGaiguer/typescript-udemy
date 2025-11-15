@@ -14,7 +14,7 @@ export class Escritor {
         return this._ferramenta;
     }
 
-    escrrever(): void {
+    escrever(): void {
         if (this.ferramenta === null) {
             console.log('Nao posso escrever sem ferramenta');
             return;
@@ -55,4 +55,4 @@ console.log(maquinaEscrever.nome);
 escritor.ferramenta = caneta;
 escritor.ferramenta = maquinaEscrever;
 escritor.ferramenta = null;
-escritor.escrrever();
+escritor.escrever();
