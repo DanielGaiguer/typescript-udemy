@@ -3,7 +3,7 @@ function semRetorno(...args: string[]): void {
     console.log(args.join(' '));
 }
 
-const pessoa = {
+export const pessoa = {
     nome: 'Daniel',
     sobrenome: 'Gaiguer',
 
