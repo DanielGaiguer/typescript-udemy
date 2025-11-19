@@ -15,6 +15,8 @@ var VideoPlayer = (function () {
         this.videoPlayer = videoPlayerElements.videoPlayer;
         this.playButton = videoPlayerElements.playButton;
         this.stopButton = videoPlayerElements.stopButton;
+        this.highVolButton = videoPlayerElements.highVolButton;
+        this.lowVolButton = videoPlayerElements.lowVolButton;
     }
     VideoPlayer.prototype.startEvents = function () {
         var _this = this;
@@ -23,6 +25,12 @@ var VideoPlayer = (function () {
         });
         this.stopButton.addEventListener('click', function () {
             _this.stop();
+        });
+        this.highVolButton.addEventListener('click', function () {
+            _this.highVolume();
+        });
+        this.lowVolButton.addEventListener('click', function () {
+            _this.lowVolume();
         });
     };
     VideoPlayer.prototype.playToggle = function () {
@@ -40,6 +48,12 @@ var VideoPlayer = (function () {
         this.videoPlayer.currentTime = 0;
         this.playButton.innerText = 'Play';
     };
+    VideoPlayer.prototype.highVolume = function () {
+        this.videoPlayer.volume = Math.min(this.videoPlayer.volume + 0.1, 1);
+    };
+    VideoPlayer.prototype.lowVolume = function () {
+        this.videoPlayer.volume = Math.max(this.videoPlayer.volume - 0.1, 0);
+    };
     return VideoPlayer;
 }());
 exports["default"] = VideoPlayer;
@@ -47,6 +61,8 @@ var videoPlayer = new VideoPlayer({
     videoPlayer: document.querySelector('.video'),
     playButton: document.querySelector('.play'),
     stopButton: document.querySelector('.stop'),
+    highVolButton: document.querySelector('.highVol'),
+    lowVolButton: document.querySelector('.lowVol'),
 });
 videoPlayer.startEvents();
 
