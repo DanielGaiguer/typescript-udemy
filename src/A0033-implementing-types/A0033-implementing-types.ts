@@ -1,4 +1,4 @@
-type TipoPessoa = {
+type TipoNome = {
     nome: string;
     nomeCompleto: () => string;
 };
@@ -7,7 +7,7 @@ type TipoSobrenome = {
     sobrenome: string;
 };
 
-class Pessoa implements TipoPessoa, TipoSobrenome {
+export class Pessoa implements TipoNome, TipoSobrenome {
     constructor(
         public nome: string,
         public sobrenome: string,
