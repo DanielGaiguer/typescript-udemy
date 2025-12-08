@@ -48,7 +48,7 @@ const elemento1 = pilha.pop();
 pilha.showStack();
 console.log(elemento1);
 
-while (!pilha.isEmpty) {
+while (!pilha.isEmpty()) {
     console.log(pilha.pop());
 }
 
