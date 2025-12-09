@@ -31,7 +31,7 @@ export class VotationApp {
     showVotations(): void {
         for (const votation of this.votations) {
             console.log(votation.details);
-            for (const votationOption of votation1.votationOptions) {
+            for (const votationOption of votation.votationOptions) {
                 console.log(
                     votationOption.options,
                     votationOption.numberOfVotes,
