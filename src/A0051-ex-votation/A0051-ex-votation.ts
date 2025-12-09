@@ -61,3 +61,18 @@ voteOne.addVote('Morango');
 voteOne.addVote('Morango');
 voteOne.addVote('pera');
 voteOne.showQuestionAndOptions();
+
+const options2 = new OptionForVote();
+options2.addOption('Javascript');
+options2.addOption('Typescript');
+options2.addOption('Python');
+
+const voteTwo = new VoteInApp(
+    'Qual a melhor linguagem de programação?',
+    options2['options'],
+);
+
+voteTwo.addVote('Javascript');
+voteTwo.addVote('Javascript');
+voteTwo.addVote('Typescript');
+voteTwo.showQuestionAndOptions();
