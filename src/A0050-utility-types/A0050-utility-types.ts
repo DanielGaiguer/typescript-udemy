@@ -45,9 +45,11 @@ type ABC = 'A' | 'B' | 'C';
 type CDE = 'C' | 'D' | 'E';
 
 //O Exclude computa todos os tipos que estão em ABC, que não estão em CDE.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type TipoExclude = Exclude<ABC, CDE>; // Só vai sobrea o A, B;
 
 // O Extract computa todos os tipos que estão em ABC, que podem ser atribuídos nos tipos de CDE
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type TipoExtract = ABC; // Só vai sobrar o C;
 
 // Hard Code:
