@@ -5,3 +5,4 @@
 // Essa e uma forma de voce usar typescript puro, para gerar um bundle, voce pode configurar o ts config, ou o comando, mas e muito mais pratico utilizar o sistema de modulos do ES6
 
 console.log(MeuNamespace.nomeDoNamespace);
+console.log(constDoNamespace);
