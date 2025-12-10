@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// A sua função só serve para receber os parametros, mas a funcao decoradora e a funcao de retorno.
-// Entao a sua funcao precisa necessariamente retornar uma funcao decoradora
+
+type Constructor = new (...args: any[]) => any;
+
 function inverteNomeECor(param1: string, param2: string) {
-    // Closure
-    return function <T extends new (...args: any[]) => any>(target: T): T {
+    return function (target: Constructor) {
         console.log('Sou o decorador e recebi', target);
         return class extends target {
             cor: string;
@@ -27,7 +27,15 @@ function inverteNomeECor(param1: string, param2: string) {
     };
 }
 
-@inverteNomeECor('Valor1', 'Valor2')
+function outroDecorador(param1: string) {
+    return function (target: Constructor) {
+        console.log('Sou o segundo decorador' + param1);
+        return target;
+    };
+}
+
+@outroDecorador('Parametro do outro decorador') // 2
+@inverteNomeECor('Valor1', 'Valor2') //1
 export class Animal {
     constructor(
         public name: string,
